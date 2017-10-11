@@ -13,10 +13,10 @@ const (
 	port = ":50051"
 )
 
-// server is used to implement helloworld.GreeterServer.
+// server is used to implement hellogrpc.GreeterServer.
 type server struct{}
 
-// SayHello implements helloworld.GreeterServer
+// SayHello implements hello_grpc.MOTDServer
 func (s *server) Greeting(ctx context.Context, in *Request) (*Response, error) {
 	return &Response{Motd: "Greeting " + in.Name}, nil
 }
