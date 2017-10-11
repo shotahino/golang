@@ -17,9 +17,9 @@ const (
 // server is used to implement hellogrpc.GreeterServer.
 type server struct{}
 
-// SayHello implements hello_grpc.MOTDServer
+// SayHello implements hellogrpc.MOTDServer
 func (s *server) Greeting(ctx context.Context, in *pb.Request) (*pb.Response, error) {
-	return &pb.Response{Motd: "Greeting " + in.Name}, nil
+	return &pb.Response{Motd: "Welcome " + in.Name}, nil
 }
 
 func main() {
