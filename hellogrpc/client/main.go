@@ -10,8 +10,8 @@ import (
 )
 
 const (
-	address     = "192.168.7.105:50051"
-	defaultName = "Shota"
+	address     = "192.168.7.105:3000"
+	defaultName = "Hino"
 )
 
 func main() {

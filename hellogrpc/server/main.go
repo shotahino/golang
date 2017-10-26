@@ -5,9 +5,9 @@ import (
 	"net"
 	"os"
 
+	pb "../proto"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
-	pb "../proto"
 )
 
 const (
@@ -19,7 +19,7 @@ type server struct{}
 
 // SayHello implements hellogrpc.MOTDServer
 func (s *server) Greeting(ctx context.Context, in *pb.Request) (*pb.Response, error) {
-	return &pb.Response{Motd: "Welcome " + in.Name}, nil
+	return &pb.Response{Motd: "Dummy Service --- Welcome " + in.Name}, nil
 }
 
 func main() {
