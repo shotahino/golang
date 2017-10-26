@@ -4,14 +4,14 @@ import (
 	"log"
 	"os"
 
+	pb "../proto"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
-	pb "../proto"
 )
 
 const (
-	address     = "localhost:50051"
-	defaultName = "Steph Curry"
+	address     = "192.168.7.105:50051"
+	defaultName = "Shota"
 )
 
 func main() {
@@ -20,8 +20,6 @@ func main() {
 	if err != nil {
 		log.Fatalf("did not connect: %v", err)
 	}
-	log.Println("Connected to gRPC server")
-
 	defer conn.Close()
 	c := pb.NewMOTDClient(conn)
 
