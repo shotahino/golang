@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	address     = "192.168.7.105:3000"
+	address     = "192.168.7.1:3000"
 	defaultName = "Hino"
 )
 
